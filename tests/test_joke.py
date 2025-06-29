@@ -36,4 +36,15 @@ def test_joke_with_multiple_chuck_norris(monkeypatch):
     assert response.status_code == 200
     assert response.json()["joke"] == "Meow Norris fought Meow Norris and lost."
 
+def test_joke_without_chuck_norris(monkeypatch):
+    async def mock_fetch():
+        return {"value": "The internet is down."}
+
+    monkeypatch.setattr("app.api.joke.fetch_chuck_norris_joke", mock_fetch)
+
+    response = client.get("/joke")
+    assert response.status_code == 200
+    assert response.json() == {"joke": "The internet is down."}
+
+
 
