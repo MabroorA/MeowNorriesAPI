@@ -1,4 +1,4 @@
-from fastapi import APIRouter,HTTPException
+from fastapi import APIRouter, HTTPException
 from app.config import CHUCK_NORRIS_API_URL
 
 from app.services.joke_service import fetch_chuck_norris_joke
