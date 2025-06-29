@@ -3,7 +3,7 @@ from app.api.joke import router as joke_router
 
 app = FastAPI(
     title="Meow Norris API",
-    description="A Chuck Norris joke API with a turned Meow Norries",
+    description="A Chuck Norris joke API turned Meow Norries",
     version="1.0.0"
 )
 
