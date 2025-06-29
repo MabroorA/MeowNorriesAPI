@@ -56,6 +56,15 @@ def test_joke_with_lowercase_chuck_norris(monkeypatch):
     assert response.status_code == 200
     assert response.json()["joke"] == "Did you know Meow Norris can divide by zero?"
 
+def test_joke_api_response_missing_value_key(monkeypatch):
+    async def mock_fetch_missing_value():
+        return {}
+
+    monkeypatch.setattr("app.api.joke.fetch_chuck_norris_joke", mock_fetch_missing_value)
+
+    response = client.get("/joke")
+    assert response.status_code == 503
+    assert response.json() == {"detail": "Failed to fetch joke from external API"}
 
 
 
