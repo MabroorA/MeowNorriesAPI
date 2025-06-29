@@ -1,0 +1,15 @@
+# Ignore Python virtual environment
+venv/
+
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+
+# Test cache
+*.pytest_cache/
+.pytest_cache/
+.cache/
+
+
+
+
