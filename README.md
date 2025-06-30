@@ -4,24 +4,51 @@ A Chuck Norris joke API that replaces "Chuck Norris" with "Meow Norris".
 
 ## Quick Start
 
-1. **Setup**
+### Prerequisites
 
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+Make sure you have Python 3.8+ installed:
 
-2. **Run**
+```bash
+python3 --version
+```
 
-   ```bash
-   python run.py
-   ```
+### 1. Setup
 
-3. **Test**
-   ```bash
-   PYTHONPATH=$(pwd) pytest tests/
-   ```
+**Mac/Linux:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Windows:**
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 2. Run
+
+```bash
+python run.py
+```
+
+### 3. Test
+
+**Mac/Linux:**
+
+```bash
+PYTHONPATH=$(pwd) pytest tests/
+```
+
+**Windows:**
+
+```bash
+set PYTHONPATH=%cd% && pytest tests/
+```
 
 Visit: http://127.0.0.1:8000
 
@@ -58,4 +85,4 @@ tests/test_joke.py    # Tests
 - ✅ Multiple Chuck Norris in one joke
 - ✅ Error handling
 - ✅ Missing data handling
-- Many more can be added but as was instrucuted ti keep endpoint lean, this was limited
+- Many more can be added but as was instructed to keep project lean, this was limited.
