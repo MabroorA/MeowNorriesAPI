@@ -66,7 +66,7 @@ python -m pip install -r requirements.txt
 ### 2. Run
 
 ```bash
-python run.py
+python3 run.py
 ```
 
 ### 3. Test
