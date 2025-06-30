@@ -6,28 +6,61 @@ A Chuck Norris joke API that replaces "Chuck Norris" with "Meow Norris".
 
 ### Prerequisites
 
-Make sure you have Python 3.8+ installed:
+**Check if Python is installed:**
+
+```bash
+python --version
+```
+
+If that doesn't work, try:
 
 ```bash
 python3 --version
 ```
 
+**If Python is not installed:**
+
+- **Mac**: Install from [python.org](https://python.org) or use `brew install python`
+- **Windows**: Download from [python.org](https://python.org) and check "Add to PATH"
+
 ### 1. Setup
+
+**If you have `python3` command:**
+
+```bash
+python3 -m venv .venv
+```
+
+**If you only have `python` command:**
+
+```bash
+python -m venv .venv
+```
+
+**Activate virtual environment:**
 
 **Mac/Linux:**
 
 ```bash
-python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
 ```
 
 **Windows:**
 
 ```bash
-python -m venv .venv
 .venv\Scripts\activate
+```
+
+**Install dependencies:**
+
+```bash
 pip install -r requirements.txt
+```
+
+**If `pip` command fails, try:**
+
+```bash
+python -m pip install -r requirements.txt
 ```
 
 ### 2. Run
