@@ -60,7 +60,7 @@ pip install -r requirements.txt
 **If `pip` command fails, try:**
 
 ```bash
-python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ### 2. Run
@@ -71,16 +71,16 @@ python3 run.py
 
 ### 3. Test
 
-**Mac/Linux:**
+**Mac:**
 
 ```bash
-PYTHONPATH=$(pwd) pytest tests/
+PYTHONPATH=$(pwd) pytest -v tests/
 ```
 
 **Windows:**
 
 ```bash
-set PYTHONPATH=%cd% && pytest tests/
+set PYTHONPATH=%cd% && pytest -v tests/
 ```
 
 Visit: http://127.0.0.1:8000
