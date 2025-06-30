@@ -6,7 +6,7 @@ A Chuck Norris joke API that replaces "Chuck Norris" with "Meow Norris".
 
 ### Prerequisites
 
-**Check if Python is installed:**
+**Check which Python command works on your system:**
 
 ```bash
 python --version
@@ -18,6 +18,8 @@ If that doesn't work, try:
 python3 --version
 ```
 
+**Remember which command worked** - use that same command throughout these instructions.
+
 **If Python is not installed:**
 
 - **Mac**: Install from [python.org](https://python.org) or use `brew install python`
@@ -25,13 +27,21 @@ python3 --version
 
 ### 1. Setup
 
-**If you have `python3` command:**
+**Navigate to your project folder:**
+
+```bash
+cd MeowNorriesAPI
+```
+
+**Create virtual environment (use your working Python command):**
+
+If `python3` worked for you:
 
 ```bash
 python3 -m venv .venv
 ```
 
-**If you only have `python` command:**
+If `python` worked for you:
 
 ```bash
 python -m venv .venv
@@ -39,7 +49,7 @@ python -m venv .venv
 
 **Activate virtual environment:**
 
-**Mac/Linux:**
+**Mac:**
 
 ```bash
 source .venv/bin/activate
@@ -57,30 +67,32 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**If `pip` command fails, try:**
+**If `pip` command fails, use your Python command:**
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-### 2. Run
+or
 
 ```bash
-python3 run.py
+python -m pip install -r requirements.txt
+```
+
+### 2. Run
+
+**Make sure you're in the project folder and virtual environment is activated, then:**
+
+```bash
+python run.py
 ```
 
 ### 3. Test
 
-**Mac:**
+**Make sure you're in the project folder and virtual environment is activated, then:**
 
 ```bash
 PYTHONPATH=$(pwd) pytest -v tests/
-```
-
-**Windows:**
-
-```bash
-set PYTHONPATH=%cd% && pytest -v tests/
 ```
 
 Visit: http://127.0.0.1:8000
